@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="3.1.0.1156" ExportMode="NoUniqueID, DefaultValues, SimplifiedConfigStrings" PISystem="ZOIDBERG" Database="Scratch" Description="" Created="2025-02-28T14:55:32.3270943Z" id="5518676b-cdfd-4a88-bc92-78ce22a4397d" ParentKey="1aa97e6c-e262-462b-95e7-a26930d01a61" ExportedObject="Shift Pattern (Daily) Schedule" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="206 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{218ca32b-e10a-4be6-80d9-7f0dc9cae576}\ElementTemplates[{5518676b-cdfd-4a88-bc92-78ce22a4397d}]*ZOIDBERG\Scratch\ElementTemplates[Shift Pattern (Daily) Schedule]">
+  <AFElementTemplate>
+    <Name>Shift Pattern (Daily) Schedule</Name>
+    <Description />
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate />
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFExtendedProperty>
+      <Name>Override</Name>
+      <Value type="AFElement">Shift Pattern</Value>
+    </AFExtendedProperty>
+    <AFAttributeTemplate>
+      <Name>Shift Count</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[None - Odd - Even]</TypeQualifier>
+      <Value />
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%Server%\%Element%.%Attribute%;pointtype=Int32;step=1</ConfigString>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Shift End</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>DateTime</Type>
+      <TypeQualifier />
+      <Value type="DateTime">0001-01-01 00:00:00Z</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\192.168.1.32\%Element%.%Attribute%;ReadOnly=False;pointtype=Timestamp;ptclassname=base</ConfigString>
+      <AFAttributeTemplate>
+        <Name>Epoch</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Int32</Type>
+        <TypeQualifier />
+        <Value type="Int32">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>..</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Shift Start</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>DateTime</Type>
+      <TypeQualifier />
+      <Value type="DateTime">0001-01-01 00:00:00Z</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\192.168.1.32\%Element%.%Attribute%;ReadOnly=False;pointtype=Timestamp;ptclassname=base</ConfigString>
+      <AFAttributeTemplate>
+        <Name>Epoch</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Int32</Type>
+        <TypeQualifier />
+        <Value type="Int32">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>..</ConfigString>
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Shifts</Name>
+      <Description>Enter shift start end time times using PItime in array</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String[]</Type>
+      <TypeQualifier />
+      <Value type="String[4]">
+        <Item>t+7h+45m</Item>
+        <Item>t+15h+45m</Item>
+        <Item>t+15h+45m</Item>
+        <Item>t+23h+45m</Item>
+      </Value>
+      <DataReference />
+      <AFAttributeTemplate>
+        <Name>Friday</Name>
+        <Description>Shifts on Friday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Monday</Name>
+        <Description>Shifts on Monday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Saturday</Name>
+        <Description>Shifts on Saturday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Sunday</Name>
+        <Description>Shifts on Sunday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Thursday</Name>
+        <Description>Shifts on Thursday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Tuesday</Name>
+        <Description>Shifts on Tuesday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>Wednesday</Name>
+        <Description>Shifts on Wednesday?</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>true</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>Shift Times</Name>
+      <Description>Use periodic scheduling to align execution with shift start/end times</Description>
+      <OutputTime />
+      <GroupID>0</GroupID>
+      <CaseTemplate />
+      <Target>Shift Pattern (Daily) Schedule</Target>
+      <CreateEnabled>false</CreateEnabled>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>NoShift := // System digital state used to indicate out of hours&#xD;
+DigState("Out of Serv");&#xD;
+Now := '*';&#xD;
+Sunday := // Is the shift active today (Sunday)&#xD;
+'Shifts|Sunday' And Weekday(Now) = 1;&#xD;
+Monday := // Is the shift active today (Monday)&#xD;
+'Shifts|Monday' And Weekday(Now) = 2;&#xD;
+Tuesday := // Is the shift active today (Tuesday)&#xD;
+'Shifts|Tuesday' And Weekday(Now) = 3;&#xD;
+Wednesday := // Is the shift active today (Wednesday)&#xD;
+'Shifts|Wednesday' And Weekday(Now) = 4;&#xD;
+Thursday := // Is the shift active today (Thursday)&#xD;
+'Shifts|Thursday' And Weekday(Now) = 5;&#xD;
+Friday := // Is the shift active today (Friday)&#xD;
+'Shifts|Friday' And Weekday(Now) = 6;&#xD;
+Saturday := // Is the shift active today (Saturday)&#xD;
+'Shifts|Saturday' And Weekday(Now) = 7;&#xD;
+ABORT1 := // If there is no shift activity today abort &#xD;
+If Sunday or Monday Or Tuesday Or Wednesday Or Thursday Or Friday or Saturday Then "Continue" Else Exit();&#xD;
+ShiftSchedule := // Get the shift schedule&#xD;
+'Shifts';&#xD;
+PendingShifts := // Filter any shift start/end that has passed&#xD;
+FilterData(MapData(ShiftSchedule, ParseTime($val)), ($val &gt;= Now));&#xD;
+CountShifts := // Count the number of shift start/end remaining today&#xD;
+ArrayLength(PendingShifts);&#xD;
+ABORT2 := // If there isno more remaining shift activity today abort&#xD;
+If CountShifts = 0 Then Exit() Else "Continue";&#xD;
+EvenCount := // Check if there is an even or odd number of shift start/ends&#xD;
+CountShifts Mod 2 = 0;&#xD;
+EndOfShifts := // Is this the last shift of the day?&#xD;
+CountShifts = 1;&#xD;
+ShiftChange := // Is it a shift change now?&#xD;
+(If (EndOfShifts) Or (EvenCount) Then PendingShifts[1] Else PendingShifts[2]) = Now;&#xD;
+ABORT3 := // If it is a shift change output the shift start and end&#xD;
+If ShiftChange Then "Continue" Else Exit();&#xD;
+ShiftStart := If EndOfShifts Then NoShift Else If (EvenCount) Then PendingShifts[1] Else PendingShifts[2];&#xD;
+ShiftEnd := If EndOfShifts Then NoShift Else If (EvenCount) Then PendingShifts[2] Else PendingShifts[3];</ConfigString>
+        <VariableMapping>ShiftStart||Shift Start;ShiftEnd||Shift End;</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Periodic</AFPlugIn>
+        <ConfigString>Frequency=3600;Offset=2700</ConfigString>
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+    <AFAnalysisTemplate>
+      <Name>Shift Tracker</Name>
+      <Description />
+      <OutputTime />
+      <GroupID>0</GroupID>
+      <CaseTemplate />
+      <Target>Shift Pattern (Daily) Schedule</Target>
+      <CreateEnabled>false</CreateEnabled>
+      <AFAnalysisRule>
+        <AFPlugIn>PerformanceEquation</AFPlugIn>
+        <ConfigString>ShiftStart := 'Shift Start';&#xD;
+ShiftChanges := EventCount(ShiftStart, 't', '*');&#xD;
+ShiftTracker := If BadVal(ShiftStart) Or ShiftChanges = 0 Then 0 Else Abs((ShiftChanges Mod 2) -2);</ConfigString>
+        <VariableMapping>ShiftTracker||Shift Count;</VariableMapping>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+        <ConfigString />
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+</AF>

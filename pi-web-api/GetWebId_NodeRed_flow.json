@@ -1,0 +1,23 @@
+[
+    {
+        "id": "eab419a916a09815",
+        "type": "function",
+        "z": "c2e71338fd18a24c",
+        "name": "webid",
+        "func": "// provide an AF path via the payload\n// example; \\\\myafserver\\mydatabase\\myelement|myattribute\nlet afpath = msg.payload;\n\n// drop the leading \\\\\nif (afpath.startsWith(\"\\\\\")) {\n    afpath = afpath.substring(2)\n}\n\n// webId prefixes\nconst webIdType = \"P\";\nconst webIdVersion = \"1\";\nconst objectMarker = \"Ab\";\nconst baseElementMarker = \"E\";\n\n// web-encode the full path\nconst base64EncodedPath = Buffer.from(afpath.toUpperCase()).toString(\"base64\")\n\n// prefix \nconst generatedWebId = webIdType + webIdVersion + objectMarker + baseElementMarker + base64EncodedPath;\n\n// return the webid and afpath\nmsg.payload = {\"webid\": generatedWebId,\n    \"afpath\": afpath};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "fcf6768a7f603385",
+                "01c3de923ea1f986"
+            ]
+        ]
+    }
+]

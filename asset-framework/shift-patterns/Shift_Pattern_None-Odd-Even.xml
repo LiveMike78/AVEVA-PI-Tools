@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="3.1.0.1156" ExportMode="NoUniqueID, DefaultValues, SimplifiedConfigStrings" PISystem="ZOIDBERG" Database="Scratch" Description="" Created="2025-02-28T14:50:40.0426915Z" id="7e61ab26-12de-45c8-87b4-1c343d5ed4f5" ParentKey="1aa97e6c-e262-462b-95e7-a26930d01a61" ExportedObject="None - Odd - Even" ExportedType="AFEnumerationSet" Identity="EnumerationSet" PIPersist="191 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{218ca32b-e10a-4be6-80d9-7f0dc9cae576}\EnumerationSets[{7e61ab26-12de-45c8-87b4-1c343d5ed4f5}]*ZOIDBERG\Scratch\EnumerationSets[None - Odd - Even]">
+  <AFEnumerationSet>
+    <Name>None - Odd - Even</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>Even</Name>
+      <Value>2</Value>
+      <Description />
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>None</Name>
+      <Value>0</Value>
+      <Description />
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Odd</Name>
+      <Value>1</Value>
+      <Description />
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+</AF>
